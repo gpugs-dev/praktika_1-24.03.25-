@@ -6,9 +6,20 @@ int main() {
     printf("Введите целое число: ");
     scanf("%d", &number);
 
-    int isEven = (number % 2 == 0);
+    // проверка на то, делится ли число на 2 без остатка
+    int isEven;
+    if (number % 2 == 0) {
+        isEven = 1; // 1 означает "четное"
+    } else {
+        isEven = 0; // 0 означает "нечетное"
+    }
 
-    printf("Число %d является %s\n", number, isEven ? "четным" : "нечетным");
+    // вывод результата
+    if (isEven) {
+        printf("Число %d является четным\n", number);
+    } else {
+        printf("Число %d является нечетным\n", number);
+    }
 
     return 0;
 }
